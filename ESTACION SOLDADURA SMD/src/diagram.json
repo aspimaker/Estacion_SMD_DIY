@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "author": "Antonio",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 62.4, "left": -269.3, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 79.94,
+      "left": -556.57,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -200.84, "left": 86.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -76.8, "left": -298.2, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -149.6,
+      "left": -248.5,
+      "attrs": { "common": "cathode" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": 211.2, "left": -135, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 4.8,
+      "left": -240.55,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -24,
+      "left": -125.35,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -24,
+      "left": -288.55,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": -46.3, "left": -490.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd3", "top": 57.6, "left": -365.4, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": -112.6,
+      "left": -19.8,
+      "attrs": {}
+    },
+    { "type": "wokwi-gnd", "id": "gnd4", "top": 86.4, "left": -595.8, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd5", "top": -86.4, "left": 191.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "oled1:VCC", "vcc1:VCC", "red", [ "v0" ] ],
+    [ "rgb1:COM", "gnd1:GND", "green", [ "v0" ] ],
+    [ "nano:GND.1", "gnd2:GND", "black", [ "v0" ] ],
+    [ "nano:A4", "oled1:SDA", "green", [ "v38.4", "h163.2", "v-182.4", "h96" ] ],
+    [ "nano:A5", "oled1:SCL", "green", [ "v48", "h172.8", "v-182.4", "h67.2" ] ],
+    [ "r1:2", "nano:10", "green", [ "h0" ] ],
+    [ "nano:5", "r2:2", "green", [ "v0" ] ],
+    [ "encoder1:GND", "gnd3:GND", "black", [ "h0" ] ],
+    [ "encoder1:DT", "nano:2", "green", [ "h0" ] ],
+    [ "encoder1:SW", "nano:4", "green", [ "h0" ] ],
+    [ "nano:3", "encoder1:CLK", "green", [ "v0" ] ],
+    [ "r2:1", "rgb1:R", "green", [ "h0" ] ],
+    [ "r1:1", "rgb1:G", "green", [ "h0" ] ],
+    [ "r3:1", "rgb1:B", "green", [ "h0" ] ],
+    [ "ntc1:OUT", "nano:A0", "green", [ "h38.4", "v57.5", "h172.8" ] ],
+    [ "r3:2", "nano:11", "green", [ "h0" ] ],
+    [ "ntc1:VCC", "vcc1:VCC", "red", [ "h9.6", "v-96", "h-28.8" ] ],
+    [ "encoder1:VCC", "vcc1:VCC", "red", [ "h28.8", "v-162.8", "h134.4", "v0", "h48" ] ],
+    [ "nano:VIN", "vcc1:VCC", "red", [ "v19.2", "h67.2", "v-316.8" ] ],
+    [ "oled1:GND", "gnd4:GND", "black", [ "v-38.4", "h-9.6" ] ],
+    [ "ntc1:GND", "gnd5:GND", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
