@@ -1,6 +1,5 @@
 # Estacion_SMD_DIY
-
-## Base de soldadura SMD.
+Base de soldadura SMD.
 
 Actualmente en desarrollo.
 
