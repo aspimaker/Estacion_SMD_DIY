@@ -313,7 +313,7 @@
 				)
 			)
 		)
-		(property "Value" "220V 7A"
+		(property "Value" "230V 7A"
 			(at -5.75 -5.93 0)
 			(layer "F.Fab")
 			(uuid "3f6a7134-7c08-43e4-921d-1dcf11bb451e")
@@ -2790,7 +2790,7 @@
 				)
 			)
 		)
-		(property "Value" "220V para FUENTE 5V"
+		(property "Value" "230V para FUENTE 5V"
 			(at -0.83 5.25 0)
 			(layer "F.Fab")
 			(uuid "1342147a-4ca6-4fdd-8894-e7985ae7e975")

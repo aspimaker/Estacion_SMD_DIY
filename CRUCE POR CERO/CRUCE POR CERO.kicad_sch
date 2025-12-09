@@ -1716,7 +1716,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "DETECCION DE CRUCE POR CERO (220V)\n"
+	(text "DETECCION DE CRUCE POR CERO (230V)\n"
 		(exclude_from_sim no)
 		(at 96.52 74.676 0)
 		(effects
